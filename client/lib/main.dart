@@ -1,3 +1,4 @@
+import 'package:final_project/startup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,20 +11,8 @@ class FinalProject extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return MaterialApp(
-            title: 'Flutter Demo',
-            theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-            ),
-            home: Scaffold(
-                body: Center(
-                    child: Text(
-                        "Hello My Frind",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w900
-                        ),
-                    ),
-                ),
-            ),
+            title: 'Flutter Final Project',
+            home: StartUp()
         );
     }
 }
