@@ -13,9 +13,8 @@ class Login extends StatelessWidget {
             body: Container(
                 padding: EdgeInsets.all(30),
                 child: Center(
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: 20,
+                    child: ListView(
+                        shrinkWrap: true,
                         children: [
                             GenerateSectionTitle(
                                 imagePath: "assets/images/logo.png",
