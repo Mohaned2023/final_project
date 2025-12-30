@@ -1,6 +1,6 @@
 import 'package:final_project/custom_colors.dart';
-import 'package:final_project/other_auth.dart';
-import 'package:final_project/section_title.dart';
+import 'package:final_project/generators/other_auth.dart';
+import 'package:final_project/generators/section_title.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {

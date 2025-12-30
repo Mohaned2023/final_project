@@ -1,5 +1,5 @@
-import 'package:final_project/login.dart';
-// import 'package:final_project/startup.dart';
+import 'package:final_project/screens/login.dart';
+// import 'package:final_project/screens/startup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
