@@ -1,4 +1,5 @@
-import 'package:final_project/startup.dart';
+import 'package:final_project/login.dart';
+// import 'package:final_project/startup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class FinalProject extends StatelessWidget {
     Widget build(BuildContext context) {
         return MaterialApp(
             title: 'Flutter Final Project',
-            home: StartUp()
+            home: Login()
         );
     }
 }

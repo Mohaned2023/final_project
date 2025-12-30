@@ -6,4 +6,5 @@ abstract final class AppColors {
     static const Color mainText      = Color(0xFF2B7FFF);
     static const Color secondaryText = Color(0xFFFFFFFF);
     static const Color mainButton    = Color(0xFF1447E6);
+    static const Color error         = Color(0xFFB3261E);
 }
