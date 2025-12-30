@@ -1,4 +1,5 @@
 import 'package:final_project/custom_colors.dart';
+import 'package:final_project/generators/section_title.dart';
 import 'package:flutter/material.dart';
 
 class StartUp extends StatelessWidget {
@@ -9,36 +10,10 @@ class StartUp extends StatelessWidget {
         return Scaffold(
             backgroundColor: AppColors.background,
             body: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                        ClipRRect(
-                            borderRadius: BorderRadiusDirectional.circular(10),
-                            child: Image.asset(
-                                "assets/images/logo.png",
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                            ),
-                        ),
-                        SizedBox(
-                            height: 15,
-                        ),
-                        Text(
-                            "XPManager",
-                            style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w900,
-                                color: AppColors.mainText
-                            ),
-                        ),
-                        Text(
-                            "Your trusted password manager.",
-                            style: TextStyle(
-                                fontSize: 16
-                            ),
-                        ),
-                    ],
+                child: GenerateSectionTitle(
+                    imagePath: "assets/images/logo.png",
+                    mainTitle: "XPManager",
+                    subTitle: "Your trusted password manager."
                 ),
             ),
             bottomNavigationBar: BottomAppBar(
@@ -61,7 +36,6 @@ class StartUp extends StatelessWidget {
                                 "start",
                                 style: TextStyle(
                                     color: AppColors.secondaryText,
-                                    fontWeight: FontWeight.bold,
                                     fontSize: 20
                                 ),
                             ),

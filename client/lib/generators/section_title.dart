@@ -18,6 +18,7 @@ class GenerateSectionTitle extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
                 ClipRRect(
                     borderRadius: BorderRadiusDirectional.circular(10),
