@@ -24,7 +24,6 @@ class StartUp extends StatelessWidget {
                         width: 400,
                         height: 45,
                         child: ElevatedButton(
-                            // TODO: Change it to login.
                             onPressed: () {
                                 Navigator.pushNamed(context, "/login");
                             },

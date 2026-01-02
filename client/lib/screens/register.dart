@@ -214,7 +214,6 @@ class _RegisterForm extends State<RegisterForm> {
                         children: [
                             Text("You have an account?"),
                             TextButton(
-                                // TODO: Change it to register.
                                 onPressed: () {
                                     Navigator.pushReplacementNamed(context, "/login");
                                 },

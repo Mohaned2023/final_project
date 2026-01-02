@@ -173,7 +173,6 @@ class _LoginForm extends State<LoginForm> {
                         children: [
                             Text("Don't have an account?"),
                             TextButton(
-                                // TODO: Change it to register.
                                 onPressed: () {
                                     Navigator.pushReplacementNamed(context, "/register");
                                 },
