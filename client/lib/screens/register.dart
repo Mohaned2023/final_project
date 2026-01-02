@@ -3,8 +3,8 @@ import 'package:final_project/generators/other_auth.dart';
 import 'package:final_project/generators/section_title.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-    const Login({super.key});
+class Register extends StatelessWidget {
+    const Register({super.key});
 
     @override
     Widget build(BuildContext context) {
@@ -18,10 +18,10 @@ class Login extends StatelessWidget {
                         children: [
                             GenerateSectionTitle(
                                 imagePath: "assets/images/logo.png",
-                                mainTitle: "Welcome Back",
-                                subTitle: "Your digital life is safe with us.",
+                                mainTitle: "Welcome!",
+                                subTitle: "Let's secure your digital world together.",
                             ),
-                            LoginForm(),
+                            RegisterForm(),
                             GenerateOtherAuthOpctions()
                         ],
                     ),
@@ -32,18 +32,20 @@ class Login extends StatelessWidget {
 }
 
 
-class LoginForm extends StatefulWidget {
-    const LoginForm({super.key});
+class RegisterForm extends StatefulWidget {
+    const RegisterForm({super.key});
 
     @override
-    State<LoginForm> createState() => _LoginForm();
+    State<RegisterForm> createState() => _RegisterForm();
 }
 
-class _LoginForm extends State<LoginForm> {
+class _RegisterForm extends State<RegisterForm> {
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
     bool isVisibil = false;
     String? _emailErrorMagssage;
     String? _passwordErrorMagssage;
+    String? _passwordConfErrorMagssage;
+    String? _passwoord;
 
 
     String? _validateEmail(String? value) {
@@ -60,6 +62,13 @@ class _LoginForm extends State<LoginForm> {
             return "Please enter an password";
         } else if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$').hasMatch(value)) {
             return "Please password with uppercase, lowercase and number.";
+        }
+        return null;
+    }
+
+    String? _validatePasswordConf(String? value) {
+        if (value == null || value != _passwoord) {
+            return "Confirmation most match the password.";
         }
         return null;
     }
@@ -141,7 +150,39 @@ class _LoginForm extends State<LoginForm> {
                         validator: _validatePassword,
                         onChanged: (value) {
                             setState(() {
+                                _passwoord = value;
                                 _passwordErrorMagssage = _validatePassword(value);
+                            });
+                        },
+                    ),
+                    TextFormField(
+                        obscureText: !isVisibil,
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.mainButton
+                                ),
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            labelText: "Password Confirmation",
+                            labelStyle: TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),
+                            floatingLabelStyle: TextStyle(
+                                color: _passwordConfErrorMagssage == null
+                                    ? AppColors.mainButton
+                                    : AppColors.error
+                            ),
+                            errorText: _passwordConfErrorMagssage
+                        ),
+                        validator: _validatePasswordConf,
+                        onChanged: (value) {
+                            setState(() {
+                                _passwordConfErrorMagssage = _validatePasswordConf(value);
                             });
                         },
                     ),
@@ -160,7 +201,7 @@ class _LoginForm extends State<LoginForm> {
                                 )
                             ),
                             child: Text(
-                                "Login",
+                                "Register",
                                 style: TextStyle(
                                     color: AppColors.secondaryText,
                                     fontSize: 20
@@ -171,13 +212,13 @@ class _LoginForm extends State<LoginForm> {
                     Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                            Text("Don't have an account?"),
+                            Text("You have an account?"),
                             TextButton(
                                 // TODO: Change it to register.
                                 onPressed: () {
-                                    Navigator.pushReplacementNamed(context, "/register");
+                                    Navigator.pushReplacementNamed(context, "/login");
                                 },
-                                child: Text("Register",
+                                child: Text("Login",
                                     style: TextStyle(
                                         color: AppColors.mainButton
                                     ),
