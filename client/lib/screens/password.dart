@@ -13,7 +13,7 @@ class Password extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                         SizedBox(
-                            height: 30,
+                            height: 50,
                         ),
                         GenerateSectionTitle(
                             imagePath: "assets/images/logo.png",
@@ -78,9 +78,7 @@ class _PasswordForm extends State<PasswordForm> {
     Widget build(BuildContext context) {
         return Form(
             key: formKey,
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 30,
+            child: ListView(
                 children: [
                     TextFormField(
                         decoration: InputDecoration(
@@ -109,6 +107,9 @@ class _PasswordForm extends State<PasswordForm> {
                             return null;
                         },
                     ),
+                    SizedBox(
+                        height: 30,
+                    ),
                     TextFormField(
                         decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
@@ -135,6 +136,9 @@ class _PasswordForm extends State<PasswordForm> {
                             return null;
                         },
                     ),
+                    SizedBox(
+                        height: 30,
+                    ),
                     TextFormField(
                         decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
@@ -160,6 +164,9 @@ class _PasswordForm extends State<PasswordForm> {
                             }
                             return null;
                         },
+                    ),
+                    SizedBox(
+                        height: 30,
                     ),
                     Row(
                         spacing: 10,
