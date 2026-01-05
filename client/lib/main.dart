@@ -1,6 +1,7 @@
 import 'package:final_project/screens/home.dart';
 import 'package:final_project/screens/login.dart';
 import 'package:final_project/screens/password.dart';
+import 'package:final_project/screens/services.dart';
 import 'package:final_project/screens/startup.dart';
 import 'package:final_project/screens/register.dart';
 import 'package:flutter/material.dart';
@@ -16,13 +17,14 @@ class FinalProject extends StatelessWidget {
     Widget build(BuildContext context) {
         return MaterialApp(
             title: 'Flutter Final Project',
-            initialRoute: "/home",
+            initialRoute: "/services",
             routes: {
                 "/startup": (context) => StartUp(),
                 "/login": (context) => Login(),
                 "/register": (context) => Register(),
                 "/password": (context) => Password(),
                 "/home": (context) => Home(),
+                "/services": (context) => Services(),
             },
         );
     }
