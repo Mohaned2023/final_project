@@ -1,3 +1,4 @@
+import 'package:final_project/screens/home.dart';
 import 'package:final_project/screens/login.dart';
 import 'package:final_project/screens/password.dart';
 import 'package:final_project/screens/startup.dart';
@@ -15,14 +16,14 @@ class FinalProject extends StatelessWidget {
     Widget build(BuildContext context) {
         return MaterialApp(
             title: 'Flutter Final Project',
-            initialRoute: "/password",
+            initialRoute: "/home",
             routes: {
                 "/startup": (context) => StartUp(),
                 "/login": (context) => Login(),
                 "/register": (context) => Register(),
                 "/password": (context) => Password(),
+                "/home": (context) => Home(),
             },
-            home: Password()
         );
     }
 }
