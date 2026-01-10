@@ -1,6 +1,7 @@
 import 'package:final_project/screens/home.dart';
 import 'package:final_project/screens/login.dart';
 import 'package:final_project/screens/password.dart';
+import 'package:final_project/screens/policy.dart';
 import 'package:final_project/screens/services.dart';
 import 'package:final_project/screens/startup.dart';
 import 'package:final_project/screens/register.dart';
@@ -17,7 +18,7 @@ class FinalProject extends StatelessWidget {
     Widget build(BuildContext context) {
         return MaterialApp(
             title: 'Flutter Final Project',
-            initialRoute: "/services",
+            initialRoute: "/policy",
             routes: {
                 "/startup": (context) => StartUp(),
                 "/login": (context) => Login(),
@@ -25,6 +26,7 @@ class FinalProject extends StatelessWidget {
                 "/password": (context) => Password(),
                 "/home": (context) => Home(),
                 "/services": (context) => Services(),
+                "/policy": (contex) => Policy(),
             },
         );
     }
