@@ -12,7 +12,7 @@
     - [x] Effective use of graphics and images.
 * Functional Requirements
     * User Interfaces and Registration
-        - [ ] A Splash Screen that includes an animated icon supporting the project`s idea.
+        - [x] A Splash Screen that includes an animated icon supporting the project`s idea.
         - [x] Login page.
         - [x] Create account page.
         - [x] User data validation during account creation.

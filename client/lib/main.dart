@@ -3,6 +3,7 @@ import 'package:final_project/screens/login.dart';
 import 'package:final_project/screens/password.dart';
 import 'package:final_project/screens/policy.dart';
 import 'package:final_project/screens/services.dart';
+import 'package:final_project/screens/splash.dart';
 import 'package:final_project/screens/startup.dart';
 import 'package:final_project/screens/register.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,10 @@ class FinalProject extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: SplashScreen(),
             title: 'Flutter Final Project',
-            initialRoute: "/policy",
+            // initialRoute: "/policy",
             routes: {
                 "/startup": (context) => StartUp(),
                 "/login": (context) => Login(),
